@@ -6,6 +6,7 @@ FROM golang:1-alpine3.10
 ENV HELM_VERSION v2.15.0
 ENV HELM3_VERSION v3.0.0
 ENV ISTIO_VERSION 1.0.5
+ENV TERRAFORM_VERSION 0.12.12
 
 # =======================
 # Install basic utilities
@@ -63,6 +64,12 @@ RUN curl -L -o /tmp/${ISTIO_FILENAME} ${ISTIO_URL} \
   && mv /tmp/istio-${ISTIO_VERSION}/bin/istioctl /bin/istioctl
 
 RUN rm -rf /tmp/* && mkdir /root/.ssh/
+
+# =======================
+# Install Terraform
+# =======================
+RUN wget https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip && \
+    unzip terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /bin
 
 WORKDIR /
 
