@@ -12,7 +12,7 @@ ENV TERRAFORM_VERSION 0.12.12
 # Install basic utilities
 # =======================
 RUN echo 'http://dl-cdn.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories
-RUN apk --update add gcc libc-dev openssh-client python dep ca-certificates git wget curl tar jq bash docker g++ make
+RUN apk --update add gcc libc-dev openssh-client python dep ca-certificates git wget curl tar jq bash docker g++ make pkg-config
 
 # =======================
 # Install gcloud SDK
