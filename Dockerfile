@@ -3,7 +3,7 @@ FROM golang:1-alpine3.10
 # =======================
 # Initialize variable
 # =======================
-ENV HELM_VERSION v2.15.0
+ENV HELM_VERSION v2.16.1
 ENV HELM3_VERSION v3.0.0
 ENV ISTIO_VERSION 1.0.5
 ENV TERRAFORM_VERSION 0.12.12
