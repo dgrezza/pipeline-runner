@@ -1,4 +1,4 @@
-FROM golang:1-alpine3.10
+FROM golang:1-alpine3.11
 
 # =======================
 # Initialize variable
