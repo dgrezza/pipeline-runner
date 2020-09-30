@@ -61,7 +61,7 @@ ENV ISTIO_FILENAME istioctl-${ISTIO_VERSION}-linux-amd64.tar.gz
 ENV ISTIO_URL https://github.com/istio/istio/releases/download/${ISTIO_VERSION}/${ISTIO_FILENAME}
 RUN curl -L -o /tmp/${ISTIO_FILENAME} ${ISTIO_URL} \
   && tar -xf /tmp/${ISTIO_FILENAME} -C /tmp \
-  && mv /tmp/istio-${ISTIO_VERSION}/istioctl /bin/istioctl
+  && mv /tmp/istioctl /bin/istioctl
 
 RUN rm -rf /tmp/* && mkdir /root/.ssh/
 
