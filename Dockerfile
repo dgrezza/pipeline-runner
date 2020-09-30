@@ -5,7 +5,7 @@ FROM golang:1-alpine3.10
 # =======================
 ENV HELM_VERSION v2.16.1
 ENV HELM3_VERSION v3.0.0
-ENV ISTIO_VERSION 1.0.5
+ENV ISTIO_VERSION 1.6.2
 ENV TERRAFORM_VERSION 0.12.12
 
 # =======================
